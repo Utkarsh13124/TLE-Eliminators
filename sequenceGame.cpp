@@ -1,5 +1,4 @@
-// Also I have to submit in cpp 17 format.
-
+// doing error as I was return answer in wrong format , he has asked to return in size , tnen display format.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -19,20 +18,26 @@ int main(){
     cin>>t;
     while(t--){
         int n ;
+        int t = 0;
         cin>>n;
-        // vector<int> v;
+        vector<int> v;
         int last = -1;
         for (int i = 0; i < n; i++){
             int x ;
             cin>>x;
-            if( i == 0 || x >= last){
-                cout<<x<<" ";
-                // v.push_back(x);
+            if( i == 0 || last == 1){
+                t++;
+                // cout<<x<<" ";
+                v.push_back(x);
             }else{
-                cout<<x<<" "<<x<<" ";
+                t+=2;
+                // cout<<1<<" "<<x<<" ";
+                v.insert(v.end() , {1,x});
             }
             last = x;
         }
+        cout<<t<<endl;
+        displayArr(&v[0] , v.size());
         cout<<endl;
     }
 
