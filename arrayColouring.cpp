@@ -18,10 +18,14 @@ int main(){
     int t ;
     cin>>t;
     while(t--){
-        int n ;
+        int n , x , sum = 0;
         cin>>n;
-        int arr[n];
-        for (int i = 0; i < n; i++) cin>>arr[i];    
+        // int sum;
+        for (int i = 0; i < n; i++) {
+            cin>>x;
+            sum += x;
+        } 
+        cout<< (!(sum %2) ? "Yes" : "No")<<endl;
     
     }
 
