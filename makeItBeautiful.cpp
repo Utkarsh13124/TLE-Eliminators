@@ -4,7 +4,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 void displayArr(int arr[] , int n){ 
-    for(int i = 0 ; i < n ; i++) cout<<arr[i]<<" ";
+
+    // for(int i = 0 ; i < n - 1 ; i++){
+
+    // }
+
+    cout<<"yes"<<endl;
+    cout<<arr[n - 1]<<" ";
+    for(int i = 0 ; i < n - 1 ; i++) cout<<arr[i]<<" ";
+    cout<<endl;
 }
 void solve(int arr[] , int n){
     
@@ -20,16 +28,12 @@ int main(){
     while(t--){
         int n ;
         cin>>n;
-        int i = 1 , ans = 0;
-        while(true){
-            if( n / i > 0 && n / i < 10){
-                ans += n / i;
-                cout<<ans<<endl;
-                break;
-            }
-            ans += 9;
-            i *= 10;
-        }
+        int arr[n];
+        for (int i = 0; i < n; i++) cin>>arr[i];    
+
+        sort(arr , arr+n );
+        if(arr[0] == arr[n - 1]) cout<<"NO"<<endl;
+        else displayArr(arr , n);
     }
 
 }

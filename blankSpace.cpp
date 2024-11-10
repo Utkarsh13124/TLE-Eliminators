@@ -7,7 +7,17 @@ void displayArr(int arr[] , int n){
     for(int i = 0 ; i < n ; i++) cout<<arr[i]<<" ";
 }
 void solve(int arr[] , int n){
-    
+    int ans = 0 , curr = 0;
+
+    for(int i = 0 ; i < n ; i++){
+        if(arr[i] == 0) curr++;
+        else curr = 0;
+        ans = max(ans, curr);
+    }
+
+    cout<<ans<<endl;
+    return;
+
 }
 int main(){
     #ifndef ONLINE_JUDGE
@@ -20,16 +30,9 @@ int main(){
     while(t--){
         int n ;
         cin>>n;
-        int i = 1 , ans = 0;
-        while(true){
-            if( n / i > 0 && n / i < 10){
-                ans += n / i;
-                cout<<ans<<endl;
-                break;
-            }
-            ans += 9;
-            i *= 10;
-        }
+        int arr[n];
+        for (int i = 0; i < n; i++) cin>>arr[i];    
+        solve(arr,n);
     }
 
 }

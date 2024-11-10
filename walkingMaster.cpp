@@ -18,18 +18,20 @@ int main(){
     int t ;
     cin>>t;
     while(t--){
-        int n ;
-        cin>>n;
-        int i = 1 , ans = 0;
-        while(true){
-            if( n / i > 0 && n / i < 10){
-                ans += n / i;
+        int a , b , c , d;
+        cin>>a>>b>>c>>d;
+        int ans = 0;
+        ans += ( d - b);
+        if( ans < 0) cout<<-1<<endl;
+        else{
+            a += ans;
+            if(a - c >= 0) {
+                ans += (a - c);
                 cout<<ans<<endl;
-                break;
             }
-            ans += 9;
-            i *= 10;
-        }
+            else cout<<-1<<endl;
+        }    
+    
     }
 
 }
