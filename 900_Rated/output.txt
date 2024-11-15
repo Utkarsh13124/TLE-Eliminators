@@ -1,12 +1,2 @@
-Yes
-No
-Yes
-Yes
-No
-No
-Yes
-No
-No
-No
-Yes
-Yes
+9
+21
