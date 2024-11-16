@@ -18,11 +18,16 @@ int main(){
     int t ;
     cin>>t;
     while(t--){
-        int n ;
+        long long int n ;
         cin>>n;
-        vector<int> arr(n);
-        for (int i = 0; i < n; i++) cin>>arr[i];    
-    
+        long long int i = 1;
+        while(true){
+            if(n % i != 0) {
+                cout<<i - 1<<endl;
+                break;
+            }
+            i++;
+        }
     }
 
 }
